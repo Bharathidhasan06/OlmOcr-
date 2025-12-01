@@ -8,8 +8,6 @@ from frappe.model.document import Document
 class olmocr(Document):
     def on_submit(self):
 
-        frappe.msgprint("Document Submitted")
-
         file_url = self.file_name
 
         if not file_url:
@@ -18,6 +16,10 @@ class olmocr(Document):
         file_doc = frappe.get_doc("File", {"file_url": file_url})
 
         pdf_path = file_doc.get_full_path()
+
+        print("pdf_path:", pdf_path)
+
+     
 
         from olm.utils.auto_pi import process_pdf_and_create_pr
 

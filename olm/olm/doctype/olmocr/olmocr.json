@@ -2,13 +2,14 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "prompt",
- "creation": "2025-11-24 16:13:20.635466",
+ "creation": "2025-11-27 12:47:20.389446",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "section_break_yfyp",
   "amended_from",
-  "file_name"
+  "file_name",
+  "amended_from"
  ],
  "fields": [
   {
@@ -29,13 +30,23 @@
    "fieldname": "file_name",
    "fieldtype": "Attach",
    "label": "File name"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "olmocr",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-24 16:21:00.649799",
+ "modified": "2025-11-27 12:47:20.389446",
  "modified_by": "Administrator",
  "module": "Olm",
  "name": "olmocr",
