@@ -192,8 +192,6 @@ def run_ocr_to_dict(pdf_path: str) -> dict:
 
     print("FINAL COMBINED YAML OUTPUT:\n", final_yaml_output)
 
-
-
     return yaml.full_load(final_yaml_output)
 
 
@@ -201,7 +199,6 @@ def normalize_amount_to_float(text: str) -> float:
     text = text.replace(".", "")
     text= text.replace(",", "")
     return float(text)
-
 
 def semantic_match_item_name(raw_name: str) -> str:
     resp = requests.post(SEMANTIC_URL, json={"query": raw_name})
